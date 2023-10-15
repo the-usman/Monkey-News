@@ -1,38 +1,116 @@
-.App {
+body {
+  list-style: none;
+
+}
+.navbar{
+  width: 98.7vw;
+  overflow: hidden;
+}
+.sidebar {
+  background-color: rgb(248, 249, 250);
+  width: 90px;
+  margin: 10px 15px;
+  border-radius: 10px;
+  height: 80vh;
+  top: 10vh;
+}
+
+.icon {
+  padding: 15px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.icon:hover,
+.active {
+  color: rgb(103, 175, 20);
+}
+
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 550px;
+    /* margin-left: 150px; */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 400px;
+    /* margin-left: 40px; */
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sp-class {
+    margin-top: 10vh;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    width: 350px;
+  }
+}
+
+.sp-class {
+  font-size: 20px;
+  top: 0vh;
+  position: fixed;
+  color: black;
+  padding: 20px;
+}
+
+.icon1 {
+  border-radius: 50%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.displayNone {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #dbdcef #0000;
+  margin-left: calc(50% - 28px);
+  animation: spinner-e04l1k 1s infinite linear;
+  /* display: none; */
+  position: absolute;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #474bff #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+  overflow: hidden;
 }
